@@ -73,7 +73,7 @@ export default function SearchWrapper({
   user,
   initialSearchTerm,
 }: SearchWrapperProps) {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() || new URLSearchParams();
   const searchTerm =
     searchParams.get("search")?.toLowerCase().trim() || initialSearchTerm;
 
