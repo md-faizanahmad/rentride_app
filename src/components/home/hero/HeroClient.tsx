@@ -1,72 +1,61 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import HeroServer from "./HeroServer";
 
-const banners = [
-  "https://res.cloudinary.com/duvavjepw/image/upload/v1753818526/banner1_n3bvc2.png",
-  "https://res.cloudinary.com/duvavjepw/image/upload/v1753818519/banner2_sig7no.png",
-  "https://res.cloudinary.com/duvavjepw/image/upload/v1753818480/banner3_jbcbha.png",
-  "https://res.cloudinary.com/duvavjepw/image/upload/v1753818511/banner4_ydmdxl.png",
-  "https://res.cloudinary.com/duvavjepw/image/upload/v1753818529/banner5_pu50hf.png",
-];
-
-export default function HeroClient() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  // Auto-play carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Animation variants
-  const slideVariants: Variants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
-    },
-    exit: {
-      opacity: 0,
-      x: -50,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
-    },
-  };
-
+export default function Hero() {
   return (
-    <div className="relative lg:h-[60vh]  bg-gradient-to-r from-blue-300 to-indigo-300 overflow-hidden">
-      {/* Background Carousel */}
+    <section className="relative w-full h-[90vh] min-h-[600px] flex items-center overflow-hidden bg-slate-950">
+      {/* --- Video Background Container --- */}
       <div className="absolute inset-0 z-0">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={currentSlide}
-            variants={slideVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="absolute inset-0"
-          >
-            <Image
-              src={banners[currentSlide]}
-              alt={`Hero banner ${currentSlide + 1}`}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-black/20" />
-          </motion.div>
-        </AnimatePresence>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover scale-105" // scale-105 prevents white edges
+          poster="https://res.cloudinary.com/duvavjepw/image/upload/v1753818526/banner1_n3bvc2.pn" // Show image while video loads
+        >
+          <source src="RentRide_Ola_Hero_Cars_Video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* --- High-End Overlays --- */}
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Gradient for Header (Top-Down) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent" />
+
+        {/* Gradient for Content (Left-to-Right) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
+
+        {/* Bottom Blend (To blend video into the next section) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
       </div>
 
-      {/* Navigation Arrows */}
+      {/* --- Content Layer --- */}
+      <div className="relative z-10 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          {/* HeroServer contains our Title, Subtext, and Search Bar */}
+          <HeroServer />
+        </motion.div>
+      </div>
 
-      {/* Server-rendered content */}
-      <HeroServer />
-    </div>
+      {/* --- Scroll Indicator (Mobile First) --- */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:block">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1"
+        >
+          <div className="w-1 h-2 bg-blue-500 rounded-full" />
+        </motion.div>
+      </div>
+    </section>
   );
 }

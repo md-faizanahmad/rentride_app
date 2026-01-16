@@ -1,84 +1,151 @@
-import { Mail, Phone, Info, Shield } from "lucide-react";
+"use client";
+import {
+  Mail,
+  Phone,
+  Shield,
+  Instagram,
+  Twitter,
+  Facebook,
+  ArrowUpRight,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-gradient-to-br from-blue-900 via-blue-300 to-blue-100 backdrop-blur-md text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Info className="w-5 h-5 mr-2" />
-              About RentRide
-            </h3>
-            <p className="text-sm">
-              RentRide connects vehicle owners with renters for a seamless,
-              affordable experience.
+    <footer className="bg-[#0a0a0a] text-gray-400 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Brand Section */}
+          <div className="space-y-6">
+            <Link href="/" className="flex items-center gap-2">
+              <span className="text-2xl font-bold text-white tracking-tighter">
+                Rent<span className="text-blue-500">Ride</span>
+              </span>
+            </Link>
+            <p className="text-sm leading-relaxed max-w-xs text-gray-500">
+              India&apos;s fastest growing peer-to-peer vehicle sharing network.
+              Connecting owners and riders across every village and city.
             </p>
+            <div className="flex gap-4">
+              <a
+                href="#"
+                className="p-2 bg-white/5 rounded-full hover:bg-blue-500 transition-colors group"
+              >
+                <Twitter className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-white/5 rounded-full hover:bg-blue-500 transition-colors group"
+              >
+                <Instagram className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-white/5 rounded-full hover:bg-blue-500 transition-colors group"
+              >
+                <Facebook className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
           </div>
 
-          {/* Contact */}
+          {/* Service Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Contact Us
-            </h3>
-            <address className="text-sm not-italic">
-              <p className="flex items-center mb-2">
-                <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:support@rentride.com">support@rentride.com</a>
-              </p>
-              <p className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
-              </p>
-            </address>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Shield className="w-5 h-5 mr-2" />
-              Policies
-            </h3>
-            <ul className="text-sm space-y-2">
+            <h3 className="text-white font-semibold mb-6">Services</h3>
+            <ul className="space-y-4 text-sm">
               <li>
-                <Link href="/terms" className="hover:underline" rel="nofollow">
-                  Terms of Use
+                <Link
+                  href="/book"
+                  className="hover:text-white flex items-center gap-1 group"
+                >
+                  Find a Vehicle{" "}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/privacy"
-                  className="hover:underline"
-                  rel="nofollow"
+                  href="/rent"
+                  className="hover:text-white flex items-center gap-1 group"
                 >
+                  List your Vehicle{" "}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/cities" className="hover:text-white">
+                  Our Presence
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/safety"
+                  className="hover:text-white flex items-center gap-2"
+                >
+                  <Shield className="w-3 h-3 text-blue-500" /> Safety Guide
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div>
+            <h3 className="text-white font-semibold mb-6">Company</h3>
+            <ul className="space-y-4 text-sm">
+              <li>
+                <Link href="/about" className="hover:text-white">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="hover:text-white">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-white">
+                  Terms of Use
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:text-white">
                   Privacy Policy
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Social/Extra */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://x.com" className="hover:text-blue-400">
-                X
+          {/* Support Section */}
+          <div className="space-y-6">
+            <h3 className="text-white font-semibold mb-6">Contact Support</h3>
+            <div className="space-y-4">
+              <a
+                href="mailto:support@rentride.com"
+                className="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-white/5"
+              >
+                <Mail className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">support@rentride.com</span>
               </a>
-              <a href="https://facebook.com" className="hover:text-blue-400">
-                Facebook
+              <a
+                href="tel:+910000000000"
+                className="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-white/5"
+              >
+                <Phone className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">+91 98765 43210</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} RentRide. All rights reserved.
-          </p>
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium uppercase tracking-widest text-gray-600">
+          <p>© {currentYear} RENTRIDE TECHNOLOGIES PVT LTD.</p>
+          <div className="flex gap-8">
+            <span className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              Service Status: Normal
+            </span>
+          </div>
         </div>
       </div>
     </footer>

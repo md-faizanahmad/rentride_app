@@ -41,7 +41,9 @@ export default async function Home() {
   return (
     <>
       {/* <Header /> */}
-      <HeroClient />
+      <div>
+        <HeroClient />
+      </div>
       <BenefitsClient />
       <StepsToUseClient />
       <BookCar />
