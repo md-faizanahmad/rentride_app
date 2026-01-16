@@ -83,7 +83,7 @@ export default function Header() {
       </header>
 
       {/* MOBILE BOTTOM NAVIGATION BAR (Instagram Style) */}
-      <nav className="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-[100%] max-w-[500px]">
+      <nav className="md:hidden fixed bottom-1 left-1/2 -translate-x-1/2 z-50 w-[100%] max-w-[500px]">
         <div className="bg-white backdrop-blur-xl border border-sky-100  p-2 flex items-center justify-around shadow-2xl">
           {navItems.map((item) => (
             <Link
