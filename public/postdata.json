@@ -1,0 +1,88 @@
+{
+  "vehicles": [
+    {
+      "vehicle_id": "1",
+      "name": "Honda Activa",
+      "type": "3-wheeler",
+      "rent": 300,
+      "image_url": "/placeholder.jpg",
+      "location": "Mumbai, MH",
+      "whatsapp_number": "+919876543210",
+      "availability": true,
+      "mileage": 50,
+      "year": 2022,
+      "verified": true,
+      "rating": 4.5
+    },
+    {
+      "vehicle_id": "2",
+      "name": "Maruti Swift",
+      "type": "4-wheeler",
+      "rent": 1000,
+      "image_url": "/placeholder.jpg",
+      "location": "Delhi, DL",
+      "whatsapp_number": "+919123456789",
+      "availability": false,
+      "mileage": 20,
+      "year": 2020,
+      "verified": false,
+      "rating": 4.2
+    },
+    {
+      "vehicle_id": "3",
+      "name": "TVS Apache",
+      "type": "3-wheeler",
+      "rent": 400,
+      "image_url": "/placeholder.jpg",
+      "location": "Bangalore, KA",
+      "whatsapp_number": "+918765432109",
+      "availability": true,
+      "mileage": 45,
+      "year": 2021,
+      "verified": true,
+      "rating": 4.8
+    },
+    {
+      "vehicle_id": "4",
+      "name": "Hyundai Creta",
+      "type": "4-wheeler",
+      "rent": 1500,
+      "image_url": "/placeholder.jpg",
+      "location": "Chennai, TN",
+      "whatsapp_number": "+917654321098",
+      "availability": true,
+      "mileage": 15,
+      "year": 2023,
+      "verified": true,
+      "rating": 4.7
+    },
+    {
+      "vehicle_id": "5",
+      "name": "Bajaj Pulsar",
+      "type": "3-wheeler",
+      "rent": 350,
+      "image_url": "/placeholder.jpg",
+      "location": "Pune, MH",
+      "whatsapp_number": "+919234567890",
+      "availability": true,
+      "mileage": 40,
+      "year": 2020,
+      "verified": false,
+      "rating": 4.3
+    },
+    {
+      "vehicle_id": "6",
+      "name": "Toyota Innova",
+      "type": "4-wheeler",
+      "rent": 2000,
+      "image_url": "/placeholder.jpg",
+      "location": "Hyderabad, TS",
+      "whatsapp_number": "+918123456789",
+      "availability": true,
+      "mileage": 12,
+      "year": 2022,
+      "verified": true,
+      "rating": 4.9
+    }
+  ]
+}

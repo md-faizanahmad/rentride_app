@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "carName": "Toyota Camry",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Gaya", "Aurangabad"],
+    "price": 50,
+    "description": "Comfortable sedan with great mileage, perfect for city rides and long trips.",
+    "contactNo": "+91 9876543210",
+    "available": true
+  },
+  {
+    "id": "2",
+    "carName": "Honda Civic",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Sasaram", "Sherghat"],
+    "price": 45,
+    "description": "Sleek and stylish, ideal for urban commuting with a sporty feel.",
+    "contactNo": "+91 9876543211",
+    "available": false
+  },
+  {
+    "id": "3",
+    "carName": "Maruti Suzuki Swift",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Patna", "Rajgir"],
+    "price": 30,
+    "description": "Compact and fuel-efficient, great for short trips and daily rentals.",
+    "contactNo": "+91 9876543212",
+    "available": true
+  },
+  {
+    "id": "4",
+    "carName": "Hyundai Creta",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Aurangabad", "Nabinagar"],
+    "price": 60,
+    "description": "Spacious SUV with modern features, perfect for family outings.",
+    "contactNo": "+91 9876543213",
+    "available": true
+  },
+  {
+    "id": "5",
+    "carName": "Mahindra XUV500",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Sasaram", "Aurangabad"],
+    "price": 70,
+    "description": "Powerful SUV for adventurous drives and off-road experiences.",
+    "contactNo": "+91 9876543214",
+    "available": false
+  },
+  {
+    "id": "6",
+    "carName": "Tata Nexon",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["DaudNagar", "Arwal"],
+    "price": 55,
+    "description": "Compact SUV with high safety ratings, ideal for city and highway.",
+    "contactNo": "+91 9876543215",
+    "available": true
+  },
+  {
+    "id": "7",
+    "carName": "Ford EcoSport",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Gaya"],
+    "price": 50,
+    "description": "Dynamic and compact, great for navigating busy city streets.",
+    "contactNo": "+91 9876543216",
+    "available": true
+  },
+  {
+    "id": "8",
+    "carName": "Kia Seltos",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Aurangabad", "Sasaram"],
+    "price": 65,
+    "description": "Premium SUV with advanced tech, perfect for long-distance travel.",
+    "contactNo": "+91 9876543217",
+    "available": false
+  },
+  {
+    "id": "9",
+    "carName": "Renault Duster",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Gaya", "Aurangabad"],
+    "price": 55,
+    "description": "Rugged and reliable, suitable for both urban and rural drives.",
+    "contactNo": "+91 9876543218",
+    "available": true
+  },
+  {
+    "id": "10",
+    "carName": "Volkswagen Polo",
+    "carImage": "/carsimage/placeholder.jpg",
+    "locations": ["Aurangabad", "Gaya"],
+    "price": 40,
+    "description": "Stylish hatchback with smooth handling, great for daily commutes.",
+    "contactNo": "+91 9876543219",
+    "available": true
+  }
+]

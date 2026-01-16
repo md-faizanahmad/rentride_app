@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota Camry",
+    "price": "₹300/perKm",
+    "description": "Reliable sedan with great fuel efficiency.",
+    "image": "https://res.cloudinary.com/duvavjepw/image/upload/v1753819956/placeholderforcar_sxio78.png"
+  },
+  {
+    "id": 2,
+    "name": "Honda SUV",
+    "price": "₹450/perKm",
+    "description": "Spacious SUV perfect for family trips.",
+    "image": "https://res.cloudinary.com/duvavjepw/image/upload/v1753819956/placeholderforcar_sxio78.png"
+  },
+  {
+    "id": 4,
+    "name": "Tesla Model 3",
+    "price": "₹500/perKm",
+    "description": "Electric sedan with cutting-edge technology.",
+    "image": "https://res.cloudinary.com/duvavjepw/image/upload/v1753819956/placeholderforcar_sxio78.png"
+  },
+  {
+    "id": 5,
+    "name": "Tesla Model 3",
+    "price": "₹300/perKm",
+    "description": "Electric sedan with cutting-edge technology.",
+    "image": "https://res.cloudinary.com/duvavjepw/image/upload/v1753819956/placeholderforcar_sxio78.png"
+  },
+  {
+    "id": 6,
+    "name": "Tesla Model 3",
+    "price": "₹700/perKm",
+    "description": "Electric sedan with cutting-edge technology.",
+    "image": "https://res.cloudinary.com/duvavjepw/image/upload/v1753819956/placeholderforcar_sxio78.png"
+  }
+]
